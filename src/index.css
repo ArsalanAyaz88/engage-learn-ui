@@ -34,6 +34,16 @@
     --ring: 260 40% 50%;
 
     --radius: 0.5rem;
+    
+    /* Sidebar variables */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 264 58% 68%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 33% 18%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
@@ -64,6 +74,16 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 260 40% 60%;
+    
+    /* Sidebar variables */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 264 58% 68%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 33% 18%;
+    --sidebar-ring: 262 83% 58%;
   }
 }
 
@@ -96,4 +116,48 @@
 
 .auth-page-transition {
   @apply transition-opacity duration-300;
+}
+
+/* New animated elements */
+.menu-item-hover {
+  @apply transition-all duration-300 ease-in-out hover:translate-x-1;
+}
+
+.glow-effect {
+  @apply animate-glow;
+}
+
+.float-element {
+  @apply animate-float;
+}
+
+.pulse-element {
+  @apply animate-pulse;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1;
+}
+
+/* Button animations */
+.btn-animated {
+  @apply transition-all duration-300 transform hover:scale-105 active:scale-95;
+}
+
+/* Dark theme specific styles */
+.dark-card {
+  @apply bg-gray-800 border border-gray-700 shadow-md shadow-black/20;
+}
+
+.dark-input {
+  @apply bg-gray-800 border-gray-700 text-gray-200 focus:border-indigo-500 focus:ring-indigo-500;
+}
+
+.dark-dropdown {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text;
 }

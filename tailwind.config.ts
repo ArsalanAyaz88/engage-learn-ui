@@ -64,9 +64,9 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         lms: {
-          primary: "#6E59A5",
-          secondary: "#7E69AB",
-          accent: "#9b87f5",
+          primary: "#8A65FF",
+          secondary: "#9B87FF",
+          accent: "#C4B5FD",
           light: "#E5DEFF",
           dark: "#1A1F2C"
         }
@@ -130,6 +130,22 @@ export default {
           "50%": {
             opacity: "0.5"
           }
+        },
+        "glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 5px rgba(138, 101, 255, 0.7), 0 0 10px rgba(138, 101, 255, 0.5)"
+          },
+          "50%": {
+            boxShadow: "0 0 15px rgba(138, 101, 255, 0.9), 0 0 20px rgba(138, 101, 255, 0.7)"
+          }
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0)"
+          },
+          "50%": {
+            transform: "translateY(-5px)"
+          }
         }
       },
       animation: {
@@ -139,7 +155,9 @@ export default {
         "fade-out": "fade-out 0.3s ease-out",
         "slide-in": "slide-in 0.3s ease-out",
         "slide-right": "slide-right 0.3s ease-out",
-        "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+        "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "glow": "glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite"
       }
     }
   },
