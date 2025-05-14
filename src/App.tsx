@@ -21,6 +21,9 @@ import CourseDetail from "./pages/dashboard/CourseDetail";
 import ExploreCourses from "./pages/dashboard/ExploreCourses";
 import ExploreCourseDetail from "./pages/dashboard/ExploreCourseDetail";
 import Profile from "./pages/dashboard/Profile";
+import Assignments from "./pages/dashboard/Assignments";
+import Quizzes from "./pages/dashboard/Quizzes";
+import Payments from "./pages/dashboard/Payments";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +52,9 @@ const App = () => {
             <Route path="/dashboard/explore-courses" element={<ExploreCourses />} />
             <Route path="/dashboard/explore-courses/:courseId" element={<ExploreCourseDetail />} />
             <Route path="/dashboard/profile" element={<Profile />} />
+            <Route path="/dashboard/assignments" element={<Assignments />} />
+            <Route path="/dashboard/quizzes" element={<Quizzes />} />
+            <Route path="/dashboard/payments" element={<Payments />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
