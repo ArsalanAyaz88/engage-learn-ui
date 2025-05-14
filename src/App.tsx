@@ -14,6 +14,13 @@ import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
+// Import dashboard pages
+import MyCourses from "./pages/dashboard/MyCourses";
+import CourseDetail from "./pages/dashboard/CourseDetail";
+import ExploreCourses from "./pages/dashboard/ExploreCourses";
+import ExploreCourseDetail from "./pages/dashboard/ExploreCourseDetail";
+import Profile from "./pages/dashboard/Profile";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +37,11 @@ const App = () => (
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/my-courses" element={<MyCourses />} />
+          <Route path="/dashboard/my-courses/:courseId" element={<CourseDetail />} />
+          <Route path="/dashboard/explore-courses" element={<ExploreCourses />} />
+          <Route path="/dashboard/explore-courses/:courseId" element={<ExploreCourseDetail />} />
+          <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
